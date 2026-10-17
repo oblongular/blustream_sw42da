@@ -1,0 +1,98 @@
+{
+  "config": {
+    "flow_title": "{name}",
+    "step": {
+      "user": {
+        "description": "Connect to the SW42DA's TCP control port. TCP/IP control must be enabled in the device's Web-GUI.",
+        "data": {
+          "host": "Host",
+          "port": "Port"
+        },
+        "data_description": {
+          "host": "Hostname or IP address of the SW42DA, e.g. sw42da.local.",
+          "port": "TCP control port, 8000 by default."
+        }
+      },
+      "discovery_confirm": {
+        "description": "Set up the Blustream SW42DA at {host}?"
+      },
+      "reconfigure": {
+        "data": {
+          "host": "Host",
+          "port": "Port"
+        },
+        "data_description": {
+          "host": "Hostname or IP address of the SW42DA, e.g. sw42da.local.",
+          "port": "TCP control port, 8000 by default."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect",
+      "invalid_response": "The device responded, but not like an SW42DA."
+    },
+    "abort": {
+      "already_configured": "Device is already configured",
+      "cannot_connect": "Failed to connect",
+      "reconfigure_successful": "Re-configuration was successful",
+      "wrong_device": "That is a different SW42DA from the one configured.",
+      "not_supported": "The device is not a Blustream SW42DA.",
+      "control_disabled": "TCP/IP control is disabled on the device. Enable it in the Web-GUI under Settings → Device Status."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "input_connected": {
+        "name": "HDMI input {input} connected"
+      },
+      "output_connected": {
+        "name": "HDMI output {output} connected"
+      }
+    },
+    "select": {
+      "source": {
+        "name": "Source",
+        "state": {
+          "hdmi_1": "HDMI 1",
+          "hdmi_2": "HDMI 2",
+          "hdmi_3": "HDMI 3",
+          "hdmi_4": "HDMI 4",
+          "arc": "ARC"
+        }
+      },
+      "output_2_scaling": {
+        "name": "HDMI output 2 scaling",
+        "state": {
+          "auto": "Auto",
+          "force_1080p": "Force 1080p",
+          "bypass": "Bypass"
+        }
+      }
+    },
+    "switch": {
+      "power": {
+        "name": "Power"
+      },
+      "output": {
+        "name": "HDMI output {output}"
+      },
+      "source_arc": {
+        "name": "Source ARC"
+      },
+      "display_always_on": {
+        "name": "Display always on"
+      },
+      "power_led_follows_display": {
+        "name": "Power LED follows display"
+      }
+    }
+  },
+  "exceptions": {
+    "command_failed": {
+      "message": "Command failed: {error}"
+    },
+    "update_failed": {
+      "message": "Could not read the SW42DA's status: {error}"
+    }
+  }
+}

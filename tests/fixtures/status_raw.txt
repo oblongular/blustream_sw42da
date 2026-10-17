@@ -1,0 +1,56 @@
+STATUS
+
+=================================================================================================
+              HDMI SW42DA Status
+              FW Version: V1.9.0
+
+Power   IR   IR_Mode   Key   Beep   LCD   LCD_PauseTime(S)   PWLED_Follow   Network   Baud     Temp(C)   Uptime(Day:Hour:Min:Sec)   
+On      On   5v        On    Off    Off   3                  On             Mode 1    57600    52.0C     0005:23:43:01              
+
+Input     Edid           HDMIcon     
+01        Force___00     On          
+02        Force___00     On          
+03        Force___00     Off         
+04        Force___00     Off         
+
+Output     FromIn     HDMIcon     OutputEn     OSP     OutputScaler     AudioSignal     
+01         04         On          Yes          SNK     Bypass           Bypass          
+02         04         Off         Yes          SNK     Auto             Downmix 2CH     
+
+ARC_Mode     OpticalSel      OpticalEn     OutMode     Audio     
+Source       Downmix 2CH     On            2.0CH       None      
+
+CEC_Control     CEC_Steps     
+On              01            
+
+MultiChannelOutFrom     2ChannelOutFrom     DRC     SurroundDecoder(Upmixer)     SpeakerVirtualizer     
+HDMI/ARC Input          HDMI/ARC Input      Off     On                           On                     
+
+Master Output     Mute     2.0CH Line Group     Downmix Line Group     2.0CH Dante Group     Downmix Dante Group     
+100               Off      On                   On                     On                    On                      
+
+Line Output         Volume     Mute     Delay(Ms)     
+2.0CH Line L        100        Off      0             
+2.0CH Line R        100        Off      0             
+Downmix Line L      80         Off      0             
+Downmix Line R      80         Off      0             
+
+Dante Output        Volume     Mute     Delay(Ms)     
+2.0CH Dante L       80         Off      0             
+2.0CH Dante R       80         Off      0             
+Downmix Dante L     80         Off      0             
+Downmix Dante R     80         Off      0             
+
+Dante        IP                  Subnet Mask           Gateway              
+7.1CH        192.168.022.086     255.255.255.000       192.168.022.001      
+2CH          192.168.022.085     255.255.255.000       192.168.022.001      
+
+DHCP         IP                  Subnet Mask           Gateway              
+On           192.168.022.088     255.255.255.000       192.168.022.001      
+(static:     192.168.000.200     255.255.255.000       192.168.000.001)     
+
+Telnet       TCP/IP Port         Mac                   Local                
+0023         8000                34:D0:B8:00:00:01     SW42DA               
+=================================================================================================
+
+SW42DA>

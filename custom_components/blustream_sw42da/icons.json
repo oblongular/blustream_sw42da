@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "select": {
+      "source": {
+        "default": "mdi:video-input-hdmi"
+      },
+      "output_2_scaling": {
+        "default": "mdi:aspect-ratio"
+      }
+    },
+    "switch": {
+      "power": {
+        "default": "mdi:power"
+      },
+      "output": {
+        "default": "mdi:video-input-hdmi"
+      },
+      "source_arc": {
+        "default": "mdi:speaker"
+      },
+      "display_always_on": {
+        "default": "mdi:monitor"
+      },
+      "power_led_follows_display": {
+        "default": "mdi:led-on"
+      }
+    }
+  }
+}

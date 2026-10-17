@@ -1,0 +1,26 @@
+{
+  "domain": "blustream_sw42da",
+  "name": "Blustream SW42DA",
+  "codeowners": ["@oblongular"],
+  "config_flow": true,
+  "dhcp": [
+    {
+      "macaddress": "34D0B82*"
+    },
+    {
+      "registered_devices": true
+    }
+  ],
+  "documentation": "https://github.com/oblongular/blustream_sw42da",
+  "integration_type": "device",
+  "iot_class": "local_push",
+  "issue_tracker": "https://github.com/oblongular/blustream_sw42da/issues",
+  "requirements": [],
+  "version": "0.1.0",
+  "zeroconf": [
+    {
+      "type": "_http._tcp.local.",
+      "name": "sw42da*"
+    }
+  ]
+}
