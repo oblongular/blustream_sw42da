@@ -68,6 +68,26 @@ Using Companion's Home Assistant module, for each input button:
 
 One button is lit for the current input; none in standby.
 
+### Input labels as button text
+
+Rename inputs in the unit's Web-GUI (Input page). Home Assistant picks up the
+new names within 30 s, and Companion's Home Assistant module exposes them as
+variables:
+
+```
+$(<connection>:entity.switch.blustream_sw42da_source_hdmi_N.attributes.label)
+```
+
+`<connection>` is the label of the Home Assistant connection on Companion's
+Connections tab. Typing `$(` in the button text field opens a variable picker;
+search for `hdmi_N` and choose the `label` attribute.
+
+The module builds its variable list on connect. If the `label` variables are
+missing, disable and re-enable the connection.
+
+The unit's front-panel display keeps its built-in input names; Web-GUI labels
+are not shown there.
+
 ## Device notes
 
 - Every connected control client receives all device output, so other
