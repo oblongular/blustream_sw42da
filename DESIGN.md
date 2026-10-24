@@ -129,8 +129,8 @@ response, not current state.
   immediate reconnect attempt; entities are unavailable until it succeeds.
 - `config_flow.py`: user and reconfigure steps validate with `STATUS` on the
   given port; DHCP and zeroconf steps identify with `get_settings`.
-- `__init__.py`: on first setup, sends `LCD ON` and `PWLED FOLLOW OFF` and
-  records `defaults_applied` in the config entry.
+- `__init__.py`: setup and unload only. Nothing is written to the device
+  unless the user operates an entity.
 
 ### Entities
 

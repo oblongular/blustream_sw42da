@@ -24,7 +24,6 @@ from pytest_homeassistant_custom_component.common import (
 )
 
 from custom_components.blustream_sw42da.const import (
-    CONF_DEFAULTS_APPLIED,
     DOMAIN,
     SCAN_INTERVAL,
 )
@@ -294,16 +293,18 @@ async def test_source_switch_names_without_web_gui(
     assert state.name == "Blustream SW42DA HDMI 2"
 
 
-async def test_defaults_applied_once(
+async def test_setup_changes_no_device_settings(
     hass: HomeAssistant, entry: MockConfigEntry, mock_client: MagicMock
 ) -> None:
-    mock_client.set_display_always_on.assert_awaited_once_with(True)
-    mock_client.set_power_led_follows_display.assert_awaited_once_with(False)
-    assert entry.data[CONF_DEFAULTS_APPLIED] is True
-
-    await hass.config_entries.async_reload(entry.entry_id)
-    await hass.async_block_till_done()
-    mock_client.set_display_always_on.assert_awaited_once()
+    for name in (
+        "set_source",
+        "set_output_enabled",
+        "set_scaling",
+        "set_power",
+        "set_display_always_on",
+        "set_power_led_follows_display",
+    ):
+        getattr(mock_client, name).assert_not_awaited()
 
 
 async def test_display_switches(

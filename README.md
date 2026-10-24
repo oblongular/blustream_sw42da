@@ -40,9 +40,6 @@ manually, use **Add integration → Blustream SW42DA** with the host
 (`sw42da.local` by default) and port (8000). Use **Reconfigure** to change
 them later.
 
-When a unit is first added, the integration sets the display and power LED to
-stay on (see below).
-
 ## Entities
 
 | Entity | Type | Description |
